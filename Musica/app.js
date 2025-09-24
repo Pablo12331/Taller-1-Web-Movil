@@ -1,4 +1,4 @@
-// Esperamos a que todo el documento HTML esté cargado para empezar a trabajar
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const songsContainer = document.getElementById('songs-container');
@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const musicSearch = async (query) => {
-        // Mostramos el mensaje de carga
         songsContainer.innerHTML = '';
         loadingMessage.style.display = 'block';
         songsSectionTitle.textContent = `Buscando resultados para: "${query}"`;
