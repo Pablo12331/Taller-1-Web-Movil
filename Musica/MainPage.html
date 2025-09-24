@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My info music</title>
+    <link rel="icon" href="Imagenes/musica.png" type="image/png">
+</head>
+<body class="bg-[#000000] text-white font-sans p-0 ">
+
+    <header class="sticky top-0 w-full bg-[#000000] border-b border-[#CC0000] z-50 relative">
+
+        <div class="container mx-auto flex items-center justify-between p-2 md:p-4">
+            <a href="#" id="music-icon">
+                <img src="Imagenes/musica.png" alt="Logo Musica" class="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14">
+            </a>
+
+            <a href="index.html" id="home-icon">
+                <img src="Imagenes/casa-silueta-negra-sin-puerta.png" alt="Volver a casa" class="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14">
+            </a>
+                
+            <img id="search-icon" src="Imagenes/lupa.png" alt="Buscar" class="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 cursor-pointer">
+
+        </div>
+
+        <div id="search-overlay" class="absolute inset-0 w-full h-full bg-[#000000] flex items-center p-2 md:p-4 hidden">
+            <input type="text" id="search-input" placeholder="Buscar canciones o artistas..." class="w-full p-3 bg-zinc-800 border border-zinc-700 rounded-full focus:outline-none focus:ring-2 focus:ring-[#CC0000]">
+        </div>
+
+    </header>
+
+    <main class="relative border-b border-[#CC0000]">
+        
+        <img src="Imagenes/banner musica.jpg" alt="Fondo de un concierto" class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-black/75"></div>
+
+        <div class="relative flex flex-col items-center text-center py-12 px-6">
+            <h1 class="text-[#CC0000] text-3xl font-bold md:text-5xl lg:text-6xl">
+                Bienvenido al apartado
+            </h1>
+            <h1 class="text-[#CC0000] text-3xl font-bold md:text-5xl lg:text-6xl">
+                de música
+            </h1>
+        </div>
+
+    </main>
+
+    <section class="py-16">
+
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-10 px-4">
+
+        <div class="hidden md:block md:w-1/2">
+
+            <img src="Imagenes/Disfrutando musica.png" alt="Un artista en el escenario" class="rounded-lg shadow-xl w-full">
+
+        </div>
+
+            <div class="w-full md:w-1/2 text-center md:text-left">
+
+                <h2 class="text-[#CC0000] text-3xl lg:text-4xl font-bold mb-4">Descubre Nuevos Sonidos</h2>
+
+                <p class="text-gray-400 leading-relaxed">
+                    Explora un universo de música sin límites. Desde los éxitos más grandes del momento hasta las joyas ocultas de artistas emergentes, nuestra plataforma te conecta con los sonidos que definirán tu próxima playlist favorita.
+                </p>
+
+                <block id="explorer-song" class="mt-6 inline-block bg-[#CC0000] text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition-colors cursor-pointer">
+                    Explorar Ahora
+                </block>
+
+            </div>
+            
+        </div>
+
+    </section>
+
+    <section class="py-16">
+
+        <div class="container mx-auto px-4">
+
+            <h2 id="songs-section-title" class="text-[#CC0000] text-3xl font-bold text-center mb-10">Top 10 Canciones del Momento</h2>
+            
+            <div id="songs-container" class="flex flex-col gap-3">
+            
+            </div>
+
+            <div id="loading-message" class="text-center text-gray-500 mt-8">
+                Cargando canciones...
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
