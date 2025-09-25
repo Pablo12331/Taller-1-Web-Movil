@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultura Pop - Foro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-purple-700 text-white p-6 text-center">
+    <h1 class="text-3xl font-bold">💬 Foro de Comentarios</h1>
+    <p class="text-sm mt-2 text-purple-200">Opiniones y conversaciones de la comunidad</p>
+  </header>
+
+  <!-- Botón volver -->
+  <main class="p-6">
+    <button onclick="window.location.href='../index.html'" 
+            class="mb-6 bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">
+      ⬅️ Volver al Home
+    </button>
+
+    <!-- Formulario -->
+    <section class="mb-8 max-w-xl mx-auto bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-bold mb-4 text-purple-700">✍️ Publica un comentario</h2>
+      <form id="commentForm" class="space-y-4">
+        <input id="name" type="text" placeholder="Tu nombre" 
+               class="w-full p-2 border rounded" required>
+        <input id="email" type="email" placeholder="Tu correo" 
+               class="w-full p-2 border rounded" required>
+        <textarea id="body" rows="3" placeholder="Escribe tu comentario..." 
+                  class="w-full p-2 border rounded" required></textarea>
+        <button type="submit" 
+                class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">
+          🚀 Publicar
+        </button>
+      </form>
+    </section>
+
+    <!-- Contenedor de comentarios -->
+    <section id="comments" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Aquí aparecerán los comentarios -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-purple-700 text-white text-center p-4 mt-6">
+    © 2025 Cultura Pop - Taller Web Móvil
+  </footer>
+
+  <!-- Enlazar JS externo -->
+  <script src="foro.js"></script>
+</body>
+</html>
