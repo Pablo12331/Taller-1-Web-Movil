@@ -9,25 +9,33 @@ function renderRow(url, containerId) {
       'Authorization': 'Bearer ' + TOKEN
     }
   })
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById(containerId);
-    container.innerHTML = '';
-    data.results.forEach(item => {
-      const poster = item.poster_path 
-        ? IMAGE_BASE + item.poster_path 
-        : 'https://via.placeholder.com/150x225?text=No+Image';
-      const card = document.createElement('div');
-      card.classList.add('card');
-      card.innerHTML = `
-        <img src="${poster}" alt="${item.title || item.name}">
-        <p>${item.title || item.name}</p>
-        <span>⭐ ${item.vote_average.toFixed(1)}</span>
-      `;
-      container.appendChild(card);
+    .then(function(res) {
+      return res.json();
+    })
+    .then(function(data) {
+      var container = document.getElementById(containerId);
+      container.innerHTML = '';
+
+      data.results.forEach(function(item) {
+        var poster = item.poster_path
+          ? IMAGE_BASE + item.poster_path
+          : 'https://via.placeholder.com/150x225?text=No+Image';
+
+        // tarjeta básica con clases tailwind
+        var card = document.createElement('div');
+        card.className = 'min-w-[150px] bg-indigo-500 rounded-lg overflow-hidden flex-shrink-0 shadow-md text-center';
+
+        card.innerHTML =
+          '<img src="' + poster + '" alt="' + (item.title || item.name) + '" class="w-full">' +
+          '<p class="text-sm m-1 text-white">' + (item.title || item.name) + '</p>' +
+          '<span class="block text-xs text-gray-200">⭐ ' + (item.vote_average ? item.vote_average.toFixed(1) : 'N/A') + '</span>';
+
+        container.appendChild(card);
+      });
+    })
+    .catch(function(err) {
+      console.error(err);
     });
-  })
-  .catch(err => console.error(err));
 }
 
 
