@@ -3,104 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demo TMDB</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #F9FAFB;
-      color: #040404;
-    }
+  <title>peliculas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    h2 {
-      margin: 20px;
-    }
-
-    header {
-      background-color: #7C3AED;
-      color: white;
-      text-align: center;
-      padding: 50px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .footer {
-      background-color: #7C3AED;
-      color: white;
-      text-align: center;
-      padding: 50px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .row-container {
-      padding: 0 20px 20px 20px;
-    }
-
-    .row {
-      display: flex;
-      gap: 15px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-    }
-
-    .row::-webkit-scrollbar {
-      height: 8px;
-    }
-    .row::-webkit-scrollbar-thumb {
-      background-color: #555;
-      border-radius: 4px;
-    }
-
-    .card {
-      min-width: 150px;
-      background-color: #6366F1;
-      border-radius: 8px;
-      overflow: hidden;
-      flex-shrink: 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-      text-align: center;
-    }
-
-    .card img {
-      width: 100%;
-      display: block;
-    }
-
-    .card p {
-      font-size: 13px;
-      margin: 5px;
-    }
-
-    .card span {
-      display: block;
-      font-size: 12px;
-      color: #aaa;
-    }
-  </style>
 </head>
 <body>
 
-  <header>
+  <header class="bg-violet-600 text-white text-center py-12 text-3xl font-bold">
     🎬 Películas   
   </header>
 
-  <h2>Tendencias de hoy</h2>
-  <div class="row-container">
-    <div class="row" id="tendencias"></div>
-  </div>
+  <section class="my-8">
+    <h2 class="text-xl font-semibold mb-4 text-center">Buscar películas</h2>
+    <div class="flex justify-center gap-4 px-4">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Escribe una película..." 
+        class="w-72 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
+      >
+      <button 
+        id="searchBtn" 
+        class="bg-violet-500 hover:bg-violet-600 text-white px-4 py-2 rounded-md shadow"
+      >
+        Buscar
+      </button>
+    </div>
+    <div class="px-4 mt-6">
+      <div class="flex gap-4 overflow-x-auto" id="searchResults"></div>
+    </div>
+  </section>
 
-  <h2>Lo más popular</h2>
-  <div class="row-container">
-    <div class="row" id="popular"></div>
-  </div>
 
-  <h2>Lo mejor evaluado</h2>
-  <div class="row-container">
-    <div class="row" id="top-rated"></div>
-  </div>
+  <section class="my-8">
+    <h2 class="text-xl font-semibold mb-4 px-4">Tendencias de hoy</h2>
+    <div class="px-4">
+      <div class="flex gap-4 overflow-x-auto" id="tendencias"></div>
+    </div>
+  </section>
 
-  <footer>
+  
+  <section class="my-8">
+    <h2 class="text-xl font-semibold mb-4 px-4">Lo más popular</h2>
+    <div class="px-4">
+      <div class="flex gap-4 overflow-x-auto" id="popular"></div>
+    </div>
+  </section>
+
+  
+  <section class="my-8">
+    <h2 class="text-xl font-semibold mb-4 px-4">Lo mejor evaluado</h2>
+    <div class="px-4">
+      <div class="flex gap-4 overflow-x-auto" id="top-rated"></div>
+    </div>
+  </section>
+
+  <footer class="bg-violet-600 text-white text-center py-4 mt-8">
     © 2025 Cultura Pop - Taller Web Móvil
   </footer>
 
