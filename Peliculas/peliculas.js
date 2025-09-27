@@ -22,7 +22,7 @@ function renderRow(url, containerId) {
       card.innerHTML = `
         <img src="${poster}" alt="${item.title || item.name}">
         <p>${item.title || item.name}</p>
-        <span>⭐ ${item.vote_average}</span>
+        <span>⭐ ${item.vote_average.toFixed(1)}</span>
       `;
       container.appendChild(card);
     });
@@ -39,3 +39,12 @@ const URL_TOP_RATED = 'https://api.themoviedb.org/3/movie/top_rated?language=es-
 renderRow(URL_TENDENCIAS, 'tendencias');
 renderRow(URL_POPULAR, 'popular');
 renderRow(URL_TOP_RATED, 'top-rated');
+
+document.getElementById("searchBtn").addEventListener("click", () => {
+  const query = document.getElementById("searchInput").value.trim();
+  if (query === "") return;
+
+  const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(query)}&language=es-ES&page=1`;
+
+  renderRow(url, 'searchResults');
+});
