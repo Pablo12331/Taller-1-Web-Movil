@@ -11,18 +11,18 @@
 
 <body>
 
-  <header class="sticky top-0 w-full bg-[#000000] border-b border-[#CC0000] z-50 relative">
+  <header class="sticky top-0 w-full bg-gray-900 z-50 relative">
 
     <div class="container mx-auto flex items-center justify-between p-2 md:p-4">
       <a href="../index.html" id="home-icon">
-        <img src="../Iconos y imagenes/Apartado de series/homelogoblanco.png" class="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14">
+        <img src="../Iconos y imagenes/Apartado de series/homelogoblanco.png" 
+        class="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14">
       </a>
-
     </div>
 
   </header>
 
-  <main class="relative border-b border-[#CC0000] h-56 md:h-72 lg:h-80 overflow-hidden">
+  <main class="relative border-b h-56 md:h-72 lg:h-80 overflow-hidden">
     <img 
       src="../Iconos y imagenes/Apartado de series/bannerseries.png" 
       alt="Banner Series"
@@ -37,18 +37,87 @@
   </main>
 
 
-      <section id="populares" class="py-16">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-6">¡Las series populares del momento!</h2>
+    <section id="populares" class="py-12">
+
+      <div class="container mx-auto px-4"> <!-- aqui van las series populares fijas-->
+
+        <h2 class="text-3xl font-bold mb-6">Series favoritas del público</h2>
         <div id="series-populares" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          
+
+          <!-- serie breaking bad -->
+          <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+            <div class="w-full" style="aspect-ratio: 1067/1600;">
+              <img src="../Iconos y imagenes/Apartado de series/posterbreakingbad.jpg"
+                  alt="Stranger Things"
+                  class="w-full h-full object-cover" />
+            </div>
+
+            <div class="p-4"> <!-- ajuste -->
+                <h3 class="text-xl font-semibold mb-2 text-white">Breaking Bad (2008)</h3>
+              <p class="text-gray-300 text-sm">
+                Walter White, un profesor de química con cáncer terminal, se asocia con un exalumno para 
+                fabricar y vender metanfetamina con el fin de asegurar el futuro de su familia.
+              </p>
+            </div>
+          </div>
+
+          <!-- serie the office -->
+          <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+            <div class="w-full" style="aspect-ratio: 1067/1600;">
+              <img src="../Iconos y imagenes/Apartado de series/postertheoffice.jpg"
+                  alt="The Office"
+                  class="w-full h-full object-cover" />
+            </div>
+
+            <div class="p-4"> <!-- ajuste -->
+                <h3 class="text-xl font-semibold mb-2 text-white">The Office (2005)</h3>
+              <p class="text-gray-300 text-sm">
+                Una comedia de estilo documental que sigue la vida diaria de los empleados de una oficina 
+                de ventas de papel.
+              </p>
+            </div>
+          </div>
+
+          <!-- serie dr house -->
+          <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+            <div class="w-full" style="aspect-ratio: 1067/1600;">
+              <img src="../Iconos y imagenes/Apartado de series/posterdrhouse.png"
+                  alt="Dr. House"
+                  class="w-full h-full object-cover" />
+            </div>
+
+            <div class="p-4"> <!-- ajuste -->
+                <h3 class="text-xl font-semibold mb-2 text-white">Dr. House (2004)</h3>
+              <p class="text-gray-300 text-sm">
+                El brillante pero misántropo Dr. Gregory House lidera un equipo de diagnóstico en un 
+                hospital, resolviendo casos médicos complejos.
+              </p>
+            </div>
+          </div>
+
+          <!-- serie dexter -->
+          <div class ="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+            <div class="w-full" style="aspect-ratio: 1067/1600;">
+              <img src="../Iconos y imagenes/Apartado de series/posterdexter.jpg"
+                  alt="Dexter"
+                  class="w-full h-full object-cover" />
+            </div>
+
+            <div class="p-4"> <!--ajuste-->
+                <h3 class="text-xl font-semibold mb-2 text-white">Dexter (2006)</h3>
+              <p class="text-gray-300 text-sm">
+                Dexter Morgan, un forense de la policía de Miami con una vida secreta como asesino en 
+                serie que solo mata a criminales.
+              </p>
+            </div>
+          </div>
+
         </div>
-      </div>
-      </section>
+      </div> <!-- fin container -->
+    </section>
 
-
-
-  <a href="#series" onclick="mostrarContenido()">Ver Series</a>
+  <!-- aqui va el buscador de series -->
+  <a href="#series" onclick="mostrarContenido()">Busca tus Series favoritas clickeando aquí!</a>
 
   <div id="contenido">
     
@@ -57,8 +126,8 @@
   <script src="series.js"></script>
 
   <footer>
-    <div class="container mx-auto text-center py-4 border-t border-[#CC0000]">
-      <p class="text-sm text-gray-400">&copy; 2024 Mi Sitio de Series. Todos los derechos reservados.</p>
+    <div class="container mx-auto text-center py-4">
+      <p class="text-sm text-gray-400">&copy; 2025 Cultura Pop - Taller Web Móvil</p>
     </div>
   </footer>
 
