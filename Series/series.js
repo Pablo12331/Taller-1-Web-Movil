@@ -11,8 +11,10 @@ function SeriesView() {
             <form id="f" class="flex flex-col gap-2 md:flex-row md:items-center mb-3">
                 <input id="q" class="border rounded p-2 flex-1" placeholder="Busca una serie (ej: Stranger Things)">
                 <select id="sort" class="border rounded p-2">
+                    <option value="">Orden: Predeterminado</option>
                     <option value="name">Orden: Nombre</option>
                     <option value="rating">Orden: Rating</option>
+
                 </select>
                 <button class="bg-gray-900 text-white px-4 py-2 rounded">Buscar</button>
             </form>
@@ -47,6 +49,7 @@ function SeriesView() {
             else if (sort.value === "rating") {
                 data.sort((a, b) => (b.show.rating.average || 0) - (a.show.rating.average || 0));
             }
+            
             
             resultados.innerHTML = data.slice(0,30).map(item => `
                 <div class="rounded shadow-lg p-4 mb-4 transition-transform duration-200 
