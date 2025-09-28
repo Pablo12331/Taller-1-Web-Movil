@@ -1,5 +1,5 @@
 # Taller 1 Intro a Web Móvil
-Grupo 3
+### Grupo 3
 Integrantes:
 
 Vicente Ruiz Escobar 
