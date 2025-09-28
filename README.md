@@ -17,3 +17,10 @@ javier.dinamarca@alumnos.ucn.cl
 Maximiliano Pastén Nayem
 20.169.262-8
 maximiliano.pasten@alumnos.ucn.cl
+
+### APIs utilizadas:
+
+- TVMaze
+- JSONPlaceHolder
+- iTunes Search API
+- TMDB
